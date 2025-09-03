@@ -1,0 +1,438 @@
+{
+  "brand": "DNA Behavior",
+  "category": "behavioral analytics",
+  "website": "https://dnabehavior.com",
+  "generated_at": "2025-09-03T01:16:18Z",
+  "score_overall": 30.0,
+  "breakdown_overall": {
+    "recognition_pct": 0.0,
+    "context_avg": 0.0,
+    "sentiment_pct": 50.0,
+    "competitive_pct": 100.0
+  },
+  "scores_by_market": {
+    "USA": {
+      "recognition_pct": 0.0,
+      "context_avg": 0.0,
+      "sentiment_pct": 50.0,
+      "competitive_pct": 100.0,
+      "mentions": 0,
+      "queries": [
+        {
+          "query": "what is DNA Behavior",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "best behavioral analytics tools in USA",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "top behavioral analytics companies in USA",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "DNA Behavior competitors in USA",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "alternatives to DNA Behavior in USA",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        }
+      ],
+      "competitors": []
+    },
+    "UK": {
+      "recognition_pct": 0.0,
+      "context_avg": 0.0,
+      "sentiment_pct": 50.0,
+      "competitive_pct": 100.0,
+      "mentions": 0,
+      "queries": [
+        {
+          "query": "what is DNA Behavior",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "best behavioral analytics tools in UK",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "top behavioral analytics companies in UK",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "DNA Behavior competitors in UK",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "alternatives to DNA Behavior in UK",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        }
+      ],
+      "competitors": []
+    },
+    "Canada": {
+      "recognition_pct": 0.0,
+      "context_avg": 0.0,
+      "sentiment_pct": 50.0,
+      "competitive_pct": 100.0,
+      "mentions": 0,
+      "queries": [
+        {
+          "query": "what is DNA Behavior",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "best behavioral analytics tools in Canada",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "top behavioral analytics companies in Canada",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "DNA Behavior competitors in Canada",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "alternatives to DNA Behavior in Canada",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        }
+      ],
+      "competitors": []
+    },
+    "Australia": {
+      "recognition_pct": 0.0,
+      "context_avg": 0.0,
+      "sentiment_pct": 50.0,
+      "competitive_pct": 100.0,
+      "mentions": 0,
+      "queries": [
+        {
+          "query": "what is DNA Behavior",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "best behavioral analytics tools in Australia",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "top behavioral analytics companies in Australia",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "DNA Behavior competitors in Australia",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "alternatives to DNA Behavior in Australia",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        }
+      ],
+      "competitors": []
+    },
+    "Sri Lanka": {
+      "recognition_pct": 0.0,
+      "context_avg": 0.0,
+      "sentiment_pct": 50.0,
+      "competitive_pct": 100.0,
+      "mentions": 0,
+      "queries": [
+        {
+          "query": "what is DNA Behavior",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "best behavioral analytics tools in Sri Lanka",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "top behavioral analytics companies in Sri Lanka",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "DNA Behavior competitors in Sri Lanka",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        },
+        {
+          "query": "alternatives to DNA Behavior in Sri Lanka",
+          "recognition": 0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
+        }
+      ],
+      "competitors": []
+    }
+  },
+  "top_competitors": [],
+  "site_signals": {
+    "organization_schema": false,
+    "faq_schema": false,
+    "hreflang": false,
+    "location_pages": true,
+    "faq_route": false
+  },
+  "offsite_signals": {
+    "wikipedia": false,
+    "wikidata": true,
+    "g2": false,
+    "capterra": false,
+    "trustpilot": true,
+    "linkedin": true,
+    "crunchbase": false
+  },
+  "recommendations": [
+    {
+      "type": "schema",
+      "priority": "high",
+      "action": "Add Organization JSON-LD on homepage with name, URL, logo, and sameAs links to LinkedIn, G2, Crunchbase."
+    },
+    {
+      "type": "schema",
+      "priority": "medium",
+      "action": "Publish /faq with 12\u201320 real buyer Q&As and add FAQPage JSON-LD."
+    },
+    {
+      "type": "i18n",
+      "priority": "medium",
+      "action": "Implement hreflang for target markets and a /locations hub with country sections."
+    },
+    {
+      "type": "content",
+      "priority": "medium",
+      "action": "Create /faq route and link it from header or footer."
+    },
+    {
+      "type": "citations",
+      "priority": "medium",
+      "action": "Create neutral Wikipedia page with third\u2011party press citations and matching Wikidata entry."
+    },
+    {
+      "type": "reviews",
+      "priority": "high",
+      "action": "Stand up a G2 profile and collect 15+ verified reviews. Reply to each."
+    },
+    {
+      "type": "reviews",
+      "priority": "high",
+      "action": "Stand up a CAPTERRA profile and collect 15+ verified reviews. Reply to each."
+    },
+    {
+      "type": "content",
+      "priority": "high",
+      "action": "USA: Publish 5 problem\u2011led pages and 15 short Q&A snippets targeting 'behavioral analytics' queries in USA. Add a local case study."
+    },
+    {
+      "type": "reputation",
+      "priority": "medium",
+      "action": "USA: Run a reviews drive. Publish 3 named customer stories with outcomes and logos."
+    },
+    {
+      "type": "content",
+      "priority": "high",
+      "action": "UK: Publish 5 problem\u2011led pages and 15 short Q&A snippets targeting 'behavioral analytics' queries in UK. Add a local case study."
+    },
+    {
+      "type": "reputation",
+      "priority": "medium",
+      "action": "UK: Run a reviews drive. Publish 3 named customer stories with outcomes and logos."
+    },
+    {
+      "type": "content",
+      "priority": "high",
+      "action": "Canada: Publish 5 problem\u2011led pages and 15 short Q&A snippets targeting 'behavioral analytics' queries in Canada. Add a local case study."
+    },
+    {
+      "type": "reputation",
+      "priority": "medium",
+      "action": "Canada: Run a reviews drive. Publish 3 named customer stories with outcomes and logos."
+    },
+    {
+      "type": "content",
+      "priority": "high",
+      "action": "Australia: Publish 5 problem\u2011led pages and 15 short Q&A snippets targeting 'behavioral analytics' queries in Australia. Add a local case study."
+    },
+    {
+      "type": "reputation",
+      "priority": "medium",
+      "action": "Australia: Run a reviews drive. Publish 3 named customer stories with outcomes and logos."
+    },
+    {
+      "type": "content",
+      "priority": "high",
+      "action": "Sri Lanka: Publish 5 problem\u2011led pages and 15 short Q&A snippets targeting 'behavioral analytics' queries in Sri Lanka. Add a local case study."
+    },
+    {
+      "type": "reputation",
+      "priority": "medium",
+      "action": "Sri Lanka: Run a reviews drive. Publish 3 named customer stories with outcomes and logos."
+    }
+  ],
+  "next_90_days_plan": {
+    "High": [
+      {
+        "type": "schema",
+        "priority": "high",
+        "action": "Add Organization JSON-LD on homepage with name, URL, logo, and sameAs links to LinkedIn, G2, Crunchbase."
+      },
+      {
+        "type": "reviews",
+        "priority": "high",
+        "action": "Stand up a G2 profile and collect 15+ verified reviews. Reply to each."
+      },
+      {
+        "type": "reviews",
+        "priority": "high",
+        "action": "Stand up a CAPTERRA profile and collect 15+ verified reviews. Reply to each."
+      },
+      {
+        "type": "content",
+        "priority": "high",
+        "action": "USA: Publish 5 problem\u2011led pages and 15 short Q&A snippets targeting 'behavioral analytics' queries in USA. Add a local case study."
+      },
+      {
+        "type": "content",
+        "priority": "high",
+        "action": "UK: Publish 5 problem\u2011led pages and 15 short Q&A snippets targeting 'behavioral analytics' queries in UK. Add a local case study."
+      },
+      {
+        "type": "content",
+        "priority": "high",
+        "action": "Canada: Publish 5 problem\u2011led pages and 15 short Q&A snippets targeting 'behavioral analytics' queries in Canada. Add a local case study."
+      },
+      {
+        "type": "content",
+        "priority": "high",
+        "action": "Australia: Publish 5 problem\u2011led pages and 15 short Q&A snippets targeting 'behavioral analytics' queries in Australia. Add a local case study."
+      },
+      {
+        "type": "content",
+        "priority": "high",
+        "action": "Sri Lanka: Publish 5 problem\u2011led pages and 15 short Q&A snippets targeting 'behavioral analytics' queries in Sri Lanka. Add a local case study."
+      }
+    ],
+    "Medium": [
+      {
+        "type": "schema",
+        "priority": "medium",
+        "action": "Publish /faq with 12\u201320 real buyer Q&As and add FAQPage JSON-LD."
+      },
+      {
+        "type": "i18n",
+        "priority": "medium",
+        "action": "Implement hreflang for target markets and a /locations hub with country sections."
+      },
+      {
+        "type": "content",
+        "priority": "medium",
+        "action": "Create /faq route and link it from header or footer."
+      },
+      {
+        "type": "citations",
+        "priority": "medium",
+        "action": "Create neutral Wikipedia page with third\u2011party press citations and matching Wikidata entry."
+      },
+      {
+        "type": "reputation",
+        "priority": "medium",
+        "action": "USA: Run a reviews drive. Publish 3 named customer stories with outcomes and logos."
+      },
+      {
+        "type": "reputation",
+        "priority": "medium",
+        "action": "UK: Run a reviews drive. Publish 3 named customer stories with outcomes and logos."
+      },
+      {
+        "type": "reputation",
+        "priority": "medium",
+        "action": "Canada: Run a reviews drive. Publish 3 named customer stories with outcomes and logos."
+      },
+      {
+        "type": "reputation",
+        "priority": "medium",
+        "action": "Australia: Run a reviews drive. Publish 3 named customer stories with outcomes and logos."
+      },
+      {
+        "type": "reputation",
+        "priority": "medium",
+        "action": "Sri Lanka: Run a reviews drive. Publish 3 named customer stories with outcomes and logos."
+      }
+    ],
+    "Low": []
+  },
+  "sources_note": "SERP parsed from public Google HTML. Keep volume low. Respect robots.txt if you expand crawling.",
+  "version": "1.0.0"
+}
