@@ -53,7 +53,7 @@ async function load() {
 
     // Competitors
     document.getElementById("competitors").innerHTML =
-      j.top_competitors.map(([n,c]) => `<li>${n} · ${c}</li>`).join("");
+      j.top_competitors.map(([n,c]) => `<li class="list-group-item">${n} · ${c}</li>`).join("");
 
     // Signals
     const site = j.site_signals, off = j.offsite_signals;
@@ -80,15 +80,15 @@ async function load() {
     const top = (j.recommendations || [])
       .sort((a,b) => ({high:0,medium:1,low:2}[a.priority] - ({high:0,medium:1,low:2}[b.priority]))
       ).slice(0,10);
-    document.getElementById("recs").innerHTML = `<ol>${top.map(r => `<li>[${r.priority}] ${r.action}</li>`).join("")}</ol>`;
+    document.getElementById("recs").innerHTML = `<ol class="list-group">${top.map(r => `<li class="list-group-item">[${r.priority}] ${r.action}</li>`).join("")}</ol>`;
 
     // Plan
     const plan = j.next_90_days_plan || {High:[],Medium:[],Low:[]};
     document.getElementById("plan").innerHTML = `
       <div class="cols">
-        <div><h3>High</h3><ol>${plan.High.map(r=>`<li>${r.action}</li>`).join("")}</ol></div>
-        <div><h3>Medium</h3><ol>${plan.Medium.map(r=>`<li>${r.action}</li>`).join("")}</ol></div>
-        <div><h3>Low</h3><ol>${plan.Low.map(r=>`<li>${r.action}</li>`).join("")}</ol></div>
+        <div><h3>High</h3><ol class="list-group">${plan.High.map(r=>`<li class="list-group-item">${r.action}</li>`).join("")}</ol></div>
+        <div><h3>Medium</h3><ol class="list-group">${plan.Medium.map(r=>`<li class="list-group-item">${r.action}</li>`).join("")}</ol></div>
+        <div><h3>Low</h3><ol class="list-group">${plan.Low.map(r=>`<li class="list-group-item">${r.action}</li>`).join("")}</ol></div>
       </div>`;
 
     // JSON-LD
