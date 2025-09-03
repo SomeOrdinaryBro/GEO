@@ -1,0 +1,19 @@
+brand: "DNA Behavior"
+category: "behavioral analytics"
+website: "https://dnabehavior.com"
+
+
+markets:
+- "USA"
+- "UK"
+- "Canada"
+- "Australia"
+- "Sri Lanka"
+
+
+queries:
+- "what is {brand}"
+- "best {category} tools in {market}"
+- "top {category} companies in {market}"
+- "{brand} competitors in {market}"
+- "alternatives to {brand} in {market}"

@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>AEO/GEO Grader</title>
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<main class="container">
+<header>
+<h1 id="brand"></h1>
+<p><strong>Overall score:</strong> <span id="score"></span></p>
+<p id="breakdown"></p>
+</header>
+
+
+<section>
+<canvas id="radar" width="520" height="360"></canvas>
+</section>
+
+
+<section>
+<h2>Markets</h2>
+<table id="markets"></table>
+</section>
+
+
+<section>
+<h2>Top Competitors</h2>
+<ul id="competitors"></ul>
+</section>
+
+
+<section>
+<h2>Site Signals</h2>
+<div id="site-signals"></div>
+<h2>Off‑site Signals</h2>
+<div id="offsite-signals"></div>
+</section>
+
+
+<section>
+<h2>Recommendations (Top 10)</h2>
+<div id="recs"></div>
+</section>
+
+
+<section>
+<h2>90‑Day Plan</h2>
+<div id="plan"></div>
+</section>
+
+
+<section>
+<h2>Copy‑ready JSON‑LD</h2>
+<pre id="jsonld" class="code"></pre>
+</section>
+
+
+<footer>
+<small>Generated weekly. Source: public web. No tracking, no cookies.</small>
+</footer>
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
