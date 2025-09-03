@@ -3,20 +3,20 @@
   "category": "behavioral analytics",
   "website": "https://dnabehavior.com",
   "generated_at": "2025-09-03T01:16:18Z",
-  "score_overall": 30.0,
+  "score_overall": 36.0,
   "breakdown_overall": {
-    "recognition_pct": 0.0,
+    "recognition_pct": 15.0,
     "context_avg": 0.0,
     "sentiment_pct": 50.0,
     "competitive_pct": 100.0
   },
   "scores_by_market": {
     "USA": {
-      "recognition_pct": 0.0,
+      "recognition_pct": 15.0,
       "context_avg": 0.0,
       "sentiment_pct": 50.0,
       "competitive_pct": 100.0,
-      "mentions": 0,
+      "mentions": 3,
       "queries": [
         {
           "query": "what is DNA Behavior",
@@ -57,11 +57,11 @@
       "competitors": []
     },
     "UK": {
-      "recognition_pct": 0.0,
+      "recognition_pct": 15.0,
       "context_avg": 0.0,
       "sentiment_pct": 50.0,
       "competitive_pct": 100.0,
-      "mentions": 0,
+      "mentions": 3,
       "queries": [
         {
           "query": "what is DNA Behavior",
@@ -102,11 +102,11 @@
       "competitors": []
     },
     "Canada": {
-      "recognition_pct": 0.0,
+      "recognition_pct": 15.0,
       "context_avg": 0.0,
       "sentiment_pct": 50.0,
       "competitive_pct": 100.0,
-      "mentions": 0,
+      "mentions": 3,
       "queries": [
         {
           "query": "what is DNA Behavior",
@@ -147,11 +147,11 @@
       "competitors": []
     },
     "Australia": {
-      "recognition_pct": 0.0,
+      "recognition_pct": 15.0,
       "context_avg": 0.0,
       "sentiment_pct": 50.0,
       "competitive_pct": 100.0,
-      "mentions": 0,
+      "mentions": 3,
       "queries": [
         {
           "query": "what is DNA Behavior",
@@ -192,11 +192,11 @@
       "competitors": []
     },
     "Sri Lanka": {
-      "recognition_pct": 0.0,
+      "recognition_pct": 15.0,
       "context_avg": 0.0,
       "sentiment_pct": 50.0,
       "competitive_pct": 100.0,
-      "mentions": 0,
+      "mentions": 3,
       "queries": [
         {
           "query": "what is DNA Behavior",

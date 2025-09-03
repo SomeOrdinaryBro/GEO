@@ -48,26 +48,43 @@ def parse_serp(html: str):
     """Parse top organic results title/url/snippet. Returns list[dict]."""
     soup = BeautifulSoup(html, "lxml")
     results = []
-    # Generic selectors; Google changes often. Good enough for MVP.
-    for g in soup.select("div.g"):
-        h3 = g.select_one("h3")
-        a = g.select_one("a")
-        if not h3 or not a:
-            continue
-        title = h3.get_text(" ", strip=True)
-        url = a.get("href")
-        if not url or not url.startswith("http"):
-            continue
-        desc_el = g.select_one("div.VwiC3b, div[data-sncf='1']")
-        snippet = desc_el.get_text(" ", strip=True) if desc_el else ""
-        results.append({"title": title, "url": url, "snippet": snippet})
-    # Fallback: also try knowledge card style blocks
+    seen = set()
+
+    # Google uses various wrappers for organic results. Check a handful of
+    # common containers and ensure we don't double-count the same URL.
+    selectors = ["div.g", "div.MjjYud", "div.NJo7tc", "div.yuRUbf"]
+    for sel in selectors:
+        for g in soup.select(sel):
+            a = g.select_one("a")
+            h3 = g.select_one("h3")
+            if not a or not h3:
+                continue
+            url = a.get("href")
+            if not url or not url.startswith("http") or url in seen:
+                continue
+            desc_el = g.select_one("div.VwiC3b, div[data-sncf='1']")
+            snippet = desc_el.get_text(" ", strip=True) if desc_el else ""
+            results.append({
+                "title": h3.get_text(" ", strip=True),
+                "url": url,
+                "snippet": snippet,
+            })
+            seen.add(url)
+
+    # Fallback: sometimes results appear outside expected wrappers
     if not results:
         for a in soup.select("a h3"):
-            title = a.get_text(" ", strip=True)
-            link = a.parent.get("href") if a.parent else None
-            if link and link.startswith("http"):
-                results.append({"title": title, "url": link, "snippet": ""})
+            parent = a.parent
+            url = parent.get("href") if parent else None
+            if not url or not url.startswith("http") or url in seen:
+                continue
+            results.append({
+                "title": a.get_text(" ", strip=True),
+                "url": url,
+                "snippet": "",
+            })
+            seen.add(url)
+
     return results[:10]
 
 
@@ -206,12 +223,12 @@ def compute_scores_by_market(queries):
                     for c in competitor_names(text, BRAND):
                         comp_counts[c] = comp_counts.get(c, 0) + 1
                         comp_counts_global[c] = comp_counts_global.get(c, 0) + 1
-            rec = 1 if mentions > 0 else 0
+            rec = mentions / len(results) if results else 0.0
             ctx = (sum(ctx_scores) / len(ctx_scores)) if ctx_scores else 0.0
             snt = (sum(sent_scores) / len(sent_scores)) if sent_scores else 0.0
             q_rows.append({
                 "query": q,
-                "recognition": rec,
+                "recognition": round(rec, 3),
                 "context_depth": round(ctx, 2),
                 "sentiment": round(snt, 3),
                 "mentions": mentions,
