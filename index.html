@@ -1,81 +1,154 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>AEO/GEO Grader</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQ0KCmY2Anm2Q8wQCFp3b1o5l3jmC6oeoV+6qw5CbtX4zR87G0yZ0p5Gy" crossorigin="anonymous" />
-<link rel="stylesheet" href="assets/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analytics Dashboard</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="app.js" defer></script>
 </head>
 <body>
-<main class="container">
-<header>
-<h1 id="brand"></h1>
-<p><strong>Overall score:</strong> <span id="score"></span></p>
-<p id="breakdown"></p>
-</header>
-
-
-<section>
-<canvas id="radar" width="520" height="360"></canvas>
-</section>
-
-
-<section>
-<h2>Markets</h2>
-<div class="table-responsive">
-<table id="markets" class="table table-striped"></table>
-</div>
-</section>
-
-
-<section>
-<h2>Top Competitors</h2>
-<ul id="competitors" class="list-group"></ul>
-</section>
-
-
-<section>
-<h2>Site Signals</h2>
-<div id="site-signals"></div>
-<h2>Off‑site Signals</h2>
-<div id="offsite-signals"></div>
-</section>
-
-
-<section>
-<h2>Recommendations (Top 10)</h2>
-<div id="recs"></div>
-</section>
-
-
-<section>
-<h2>90‑Day Plan</h2>
-<div id="plan"></div>
-</section>
-
-
-<section>
-<h2>Copy‑ready JSON‑LD</h2>
-<pre id="jsonld" class="code"></pre>
-</section>
-
-
-<footer>
-<small>Generated weekly. Source: public web. No tracking, no cookies.</small>
-</footer>
-</main>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-<script src="assets/app.js" defer></script>
-
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('assets/sw.js').catch(e => console.error('SW registration failed', e));
-    });
-  }
-</script>
-
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-toggle" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <nav aria-label="Main navigation">
+      <ul class="menu">
+        <li>
+          <button class="submenu" aria-expanded="false" aria-controls="grp-dashboard">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 3h8v8H3V3zm10 0h8v5h-8V3zM3 13h5v8H3v-8zm7 3h11v5H10v-5z" fill="currentColor"/></svg>
+            <span>Dashboard</span>
+          </button>
+          <ul id="grp-dashboard" class="sub" hidden>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Updates</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="submenu" aria-expanded="false" aria-controls="grp-reports">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 4h16v4H4V4zm0 6h10v4H4v-4zm0 6h16v4H4v-4z" fill="currentColor"/></svg>
+            <span>Reports</span>
+          </button>
+          <ul id="grp-reports" class="sub" hidden>
+            <li><a href="#">Monthly</a></li>
+            <li><a href="#">Weekly</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="submenu" aria-expanded="false" aria-controls="grp-insights">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 3.5 2.5 6.4 5.9 6.9V19H8v3h8v-3h-2.9v-3.1C16.5 15.4 19 12.5 19 9a7 7 0 00-7-7z" fill="currentColor"/></svg>
+            <span>Insights</span>
+          </button>
+          <ul id="grp-insights" class="sub" hidden>
+            <li><a href="#">Trends</a></li>
+            <li><a href="#">Segments</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="submenu" aria-expanded="false" aria-controls="grp-competitors">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M7 21l5-5 5 5V5a5 5 0 10-10 0v16z" fill="currentColor"/></svg>
+            <span>Competitors</span>
+          </button>
+          <ul id="grp-competitors" class="sub" hidden>
+            <li><a href="#">Leaderboard</a></li>
+            <li><a href="#">Share</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="submenu" aria-expanded="false" aria-controls="grp-recommendations">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 4h16v2H4V4zm2 4h12v2H6V8zm-2 4h16v2H4v-2zm2 4h12v2H6v-2z" fill="currentColor"/></svg>
+            <span>Recommendations</span>
+          </button>
+          <ul id="grp-recommendations" class="sub" hidden>
+            <li><a href="#">Top 10</a></li>
+            <li><a href="#">All</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+  <div class="content">
+    <header class="topbar">
+      <form class="search" role="search">
+        <label for="search" class="sr-only">Search insights</label>
+        <input id="search" type="search" placeholder="Search insights…" />
+      </form>
+      <div class="topbar-right">
+        <div class="avatars">
+          <img src="assets/avatar.svg" alt="User" />
+          <img src="assets/avatar.svg" alt="User" />
+          <img src="assets/avatar.svg" alt="User" />
+        </div>
+        <span class="tag">Updated weekly • no cookies</span>
+      </div>
+    </header>
+    <main>
+      <h1>New report</h1>
+      <section class="hero" aria-label="Key metrics">
+        <div class="card metric">
+          <h2>Overall Score</h2>
+          <div class="big-number"><span id="score">--</span><span id="delta"></span></div>
+        </div>
+        <div class="card">
+          <h3>Top Sales</h3>
+          <p id="topSales">--</p>
+        </div>
+        <div class="card">
+          <h3>Best Deal</h3>
+          <p><span id="bestDealValue">--</span><br><small id="bestDealCompany"></small></p>
+        </div>
+        <div class="card">
+          <h3>Total Deals</h3>
+          <p id="totalDeals">--</p>
+        </div>
+      </section>
+      <section class="grid widgets" aria-label="Charts and lists">
+        <div class="card">
+          <h3>Markets overview</h3>
+          <canvas id="marketsChart" aria-label="Market share" role="img"></canvas>
+        </div>
+        <div class="card">
+          <h3>Site Signals</h3>
+          <canvas id="siteChart" aria-label="Site signals" role="img"></canvas>
+        </div>
+        <div class="card">
+          <h3>Off-site Signals</h3>
+          <canvas id="offsiteChart" aria-label="Off-site signals" role="img"></canvas>
+        </div>
+        <div class="card">
+          <h3>Top Competitors</h3>
+          <ol id="competitors" class="leaderboard"></ol>
+        </div>
+        <div class="card">
+          <h3>Deals by referrer</h3>
+          <canvas id="referrerChart" aria-label="Deals by referrer" role="img"></canvas>
+        </div>
+        <div class="card recommendations">
+          <h3>Top 10 Recommendations</h3>
+          <ul id="recommendations" class="recommendations"></ul>
+        </div>
+        <div class="card code-block">
+          <h3>Copy-ready JSON-LD</h3>
+          <pre id="jsonld"></pre>
+          <button id="copyJsonld" class="copy" aria-live="polite">Copy</button>
+          <span id="copyToast" class="toast" aria-live="polite"></span>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="#">Methodology</a> • <a href="#">Changelog</a> • <a href="#">MIT License</a>
+    </footer>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('assets/sw.js');
+      });
+    }
+  </script>
 </body>
 </html>
