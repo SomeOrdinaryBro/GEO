@@ -1,53 +1,44 @@
 name: Build AEO/GEO report
 
-
 on:
-schedule:
-- cron: "0 3 * * 1" # Mondays 03:00 UTC
-workflow_dispatch: {}
-
+  schedule:
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
 
 permissions:
-contents: write
-
+  contents: write
 
 jobs:
-build:
-runs-on: ubuntu-latest
-steps:
-- name: Checkout
-uses: actions/checkout@v4
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-- name: Set up Python
-uses: actions/setup-python@v5
-with:
-python-version: "3.11"
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python -m spacy download en_core_web_sm
 
-- name: Cache pip
-uses: actions/cache@v4
-with:
-path: ~/.cache/pip
-key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+      - name: Run audit
+        run: python scripts/run_audit.py
 
-
-- name: Install dependencies
-run: |
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-python -m spacy download en_core_web_sm
-
-
-- name: Run audit
-run: |
-python scripts/run_audit.py
-
-
-- name: Commit report
-run: |
-git config user.name "github-actions[bot]"
-git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-git add data/report.json
-git commit -m "chore: update report $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || echo "no changes"
-git push
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/report.json
+          git commit -m "chore: update report $(date -u +'%Y-%m-%dT%H:%M:%SZ')" || echo "no changes"
+          git push
