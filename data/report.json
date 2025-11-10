@@ -2,12 +2,12 @@
   "brand": "DNA Behavior",
   "category": "behavioral analytics",
   "website": "https://dnabehavior.com",
-  "generated_at": "2025-11-03T03:49:26Z",
-  "score_overall": 31.6,
+  "generated_at": "2025-11-10T03:49:32Z",
+  "score_overall": 30.0,
   "breakdown_overall": {
-    "recognition_pct": 3.3,
-    "context_avg": 0.6,
-    "sentiment_pct": 50.7,
+    "recognition_pct": 0.0,
+    "context_avg": 0.0,
+    "sentiment_pct": 50.0,
     "competitive_pct": 100.0
   },
   "scores_by_market": {
@@ -57,18 +57,18 @@
       "competitors": []
     },
     "UK": {
-      "recognition_pct": 16.7,
-      "context_avg": 3.2,
-      "sentiment_pct": 53.7,
+      "recognition_pct": 0.0,
+      "context_avg": 0.0,
+      "sentiment_pct": 50.0,
       "competitive_pct": 100.0,
-      "mentions": 5,
+      "mentions": 0,
       "queries": [
         {
           "query": "what is DNA Behavior",
-          "recognition": 0.833,
-          "context_depth": 16.2,
-          "sentiment": 0.373,
-          "mentions": 5
+          "recognition": 0.0,
+          "context_depth": 0.0,
+          "sentiment": 0.0,
+          "mentions": 0
         },
         {
           "query": "best behavioral analytics tools in UK",
